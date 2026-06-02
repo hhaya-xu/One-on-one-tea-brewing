@@ -1,0 +1,44 @@
+// 文姬字体锁定 v4 — 2026-05-27
+// v3 → v4 变更：
+//   1. 所有字体栈末尾追加 emoji 字体，修复 Emoji 显示为 ?? 的问题
+//   2. --bodyFont 从黑体切换为宋体，正文与标题统一宋体书卷气质
+//
+// 技术约束：
+//   - 零外部 CDN 依赖，全部系统原生字体
+//   - !important 防止 joinStyles :root 块覆盖
+//   - emoji 字体必须在泛型族（serif/sans-serif/monospace）之前
+
+:root {
+  // 标题：宋体系列 — bianjing-hours 同款书卷气
+  --headerFont: "Songti SC", "STSongti-SC", "SimSun", "NSimSun",
+                "Noto Serif CJK SC", "Georgia", "Times New Roman",
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+                serif !important;
+
+  // 正文：宋体系列 — 统一书卷气质（v4 从黑体切为宋体）
+  --bodyFont: "Songti SC", "STSongti-SC", "SimSun", "NSimSun",
+              "Noto Serif CJK SC", "Georgia", "Times New Roman",
+              "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+              serif !important;
+
+  // 代码：系统等宽
+  --codeFont: "SF Mono", "Cascadia Code", "Consolas",
+              "Fira Code", "JetBrains Mono", "Source Code Pro",
+              ui-monospace, Menlo, monospace !important;
+}
+
+// 直接锁定关键元素
+html, body {
+  font-family: var(--bodyFont) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page-title, .article-title,
+.site-title, .folder-title {
+  font-family: var(--headerFont) !important;
+}
+
+code, pre, kbd, samp, .code,
+pre code, code[class*="language-"] {
+  font-family: var(--codeFont) !important;
+}
