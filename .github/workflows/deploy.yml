@@ -34,9 +34,6 @@ jobs:
       - name: Build Quartz site
         run: npx quartz build
 
-      - name: Create CNAME for custom domain
-        run: echo "www.lifeart.xin" > public/CNAME
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
