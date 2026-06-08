@@ -1,27 +1,44 @@
 ﻿import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// 极简初始布局：仅渲染正文，组件在 oqc Steps 1-3 按需恢复
-// 恢复时取消下方注释即可：
-//   left: [Component.PageTitle(), Component.Search(), Component.Darkmode(), Component.DesktopOnly(Component.Explorer())],
-//   right: [Component.Graph(), Component.DesktopOnly(Component.TableOfContents()), Component.Backlinks()],
-//   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta(), Component.TagList()],
+// 两口问茶 · 左中两栏 · Step 1 配置
+// 顶栏：站标题/副标题/导航/搜索 | 左栏：全部 | 中栏：全部 | 页脚：全部
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: [],
+  footer: Component.Footer({ links: { GitHub: "https://github.com/hhaya-xu/One-on-one-tea-brewing" } }),
 }
 
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [],
-  left: [],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.TagList(),
+  ],
+  left: [
+    Component.PageTitle(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
+    Component.Darkmode(),
+    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Graph()),
+    Component.DesktopOnly(Component.Backlinks()),
+    Component.DesktopOnly(Component.TableOfContents()),
+  ],
   right: [],
 }
 
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [],
-  left: [],
+  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  left: [
+    Component.PageTitle(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
+    Component.Darkmode(),
+    Component.DesktopOnly(Component.Explorer()),
+  ],
   right: [],
 }
