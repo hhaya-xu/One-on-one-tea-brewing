@@ -14,6 +14,20 @@
   --color-border: #e8ddd0;
   --color-footer: #2a1f1a;
 }
+/* Quartz base.scss overrides (troubleshooting.md v0.5c) */
+#quartz-body {
+  grid-template-areas: none !important;
+}
+.page-header {
+  grid-column: 1 / -1;
+}
+.left.sidebar, .right.sidebar {
+  padding: 0 !important;
+}
+body {
+  margin: 0;
+}
+
 /* @zone:viewport */
 #quartz-root.page {
   background: var(--color-paper);
