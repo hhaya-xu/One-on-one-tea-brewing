@@ -1,5 +1,5 @@
-﻿<!-- preview-base.html · OQC v0.6 · 两口问茶 -->
-<!-- 2026-07-04 · 伯喈手写骨架 · 左中两栏 · 16 data-zone 锚点 -->
+<!-- preview-base.html · OQC v0.6 · 两口问茶 -->
+<!-- 2026-07-04 · 伯喈手写骨架 · 左中两栏 · 22 data-zone 锚点 -->
 <!-- 演示内容标记 demo:start / demo:end，发布前清理 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -9,328 +9,13 @@
 <title>两口问茶</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style id="design-css">
-/* ===================================
-   两口问茶 · 视觉设计 CSS
-   风格：暖纸学术 + Akram 色系
-   22 个 @zone 分区（v2 骨架）
-   设计官：文姬 · 2026-07-04
-   =================================== */
-
-/* ── @theme 变量池 ── */
-/* @theme */
-#quartz-root.page {
-  --color-paper: #FCF5F0;
-  --color-ink: #1a0a07;
-  --color-ink-soft: #5b5550;
-  --color-accent: #803737;
-  --color-accent-hover: #a04a4a;
-  --color-gold: #C9A96E;
-  --color-gold-light: #e0d3b8;
-  --color-surface: #F8F0E8;
-  --color-surface-alt: #F0E6DA;
-  --color-border: #e8ddd0;
-  --color-footer: #2a1f1a;
-}
-
-/* ── @zone:viewport ── */
-#quartz-root.page {
-  background: var(--color-paper);
-  color: var(--color-ink-soft);
-  font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── @zone:topbar ── */
-.page-header {
-  padding: 40px 40px 28px;
-  border-color: var(--color-border) !important;
-  background: var(--color-paper);
-}
-
-/* ── @zone:breadcrumb ── */
-.breadcrumb-container {
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-gold) !important;
-  margin-bottom: 14px !important;
-}
-.breadcrumb-container a {
-  color: var(--color-gold);
-}
-
-/* ── @zone:article-title ── */
-.article-title {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 44px !important;
-  font-weight: 400 !important;
-  line-height: 1.15;
-  color: var(--color-ink) !important;
-  letter-spacing: -0.01em;
-  margin-top: 4px !important;
-}
-
-/* ── @zone:site-subtitle ── */
-.site-subtitle {
-  font-size: 15px !important;
-  color: var(--color-ink-soft) !important;
-  letter-spacing: 0.06em;
-  margin-top: 8px !important;
-}
-
-/* ── @zone:content-meta ── */
-.content-meta {
-  font-size: 13px !important;
-  color: var(--color-ink-soft) !important;
-  letter-spacing: 0.04em;
-  margin-top: 10px !important;
-}
-
-/* ── @zone:tags ── */
-.tags {
-  gap: 8px !important;
-  margin-top: 6px !important;
-}
-.tags span {
-  padding: 3px 12px !important;
-  background: var(--color-surface-alt) !important;
-  color: var(--color-ink-soft) !important;
-  border-radius: 12px !important;
-  font-size: 12px !important;
-  transition: all 0.2s;
-}
-.tags span:hover {
-  background: var(--color-accent) !important;
-  color: var(--color-paper) !important;
-}
-
-/* ── @zone:left-sidebar ── */
-.left.sidebar,
-.sidebar.left,
-div[data-zone="left-sidebar"] {
-  background: var(--color-surface);
-  border-color: var(--color-border) !important;
-  padding: 32px 24px !important;
-  min-width: 260px !important;
-  max-width: 280px !important;
-}
-
-/* ── @zone:site-title ── */
-.page-title {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 20px !important;
-  font-weight: 400 !important;
-  margin-bottom: 20px !important;
-  padding-bottom: 14px !important;
-  border-bottom: 1px solid var(--color-border);
-}
-.page-title a {
-  color: var(--color-ink) !important;
-}
-.page-title a:hover {
-  color: var(--color-accent-hover) !important;
-}
-
-/* ── @zone:search ── */
-.search-container input {
-  background: var(--color-surface-alt) !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 6px !important;
-  color: var(--color-ink-soft) !important;
-  font-size: 13px !important;
-  padding: 9px 14px !important;
-  width: 100% !important;
-  transition: border-color 0.2s;
-}
-.search-container input:focus {
-  border-color: var(--color-accent) !important;
-  ring-color: var(--color-accent) !important;
-  outline: none !important;
-}
-
-/* ── @zone:theme-toggle ── */
-.theme-toggle {
-  font-size: 13px !important;
-  color: var(--color-ink-soft) !important;
-  margin-top: 4px !important;
-}
-.theme-toggle button {
-  background: var(--color-surface-alt) !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 6px !important;
-  color: var(--color-ink-soft) !important;
-  padding: 6px 12px !important;
-  transition: all 0.2s;
-}
-.theme-toggle button:hover {
-  background: var(--color-border) !important;
-  color: var(--color-ink) !important;
-}
-
-/* ── @zone:explorer ── */
-.explorer h3 {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: var(--color-ink) !important;
-  letter-spacing: 0.08em !important;
-  text-transform: none !important;
-  margin-bottom: 8px !important;
-}
-.explorer ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.explorer a {
-  color: var(--color-ink-soft) !important;
-  font-size: 13px !important;
-  padding: 3px 0 !important;
-  display: block;
-  transition: color 0.15s;
-}
-.explorer a:hover {
-  color: var(--color-accent) !important;
-}
-
-/* ── @zone:folder-count ── */
-.folder-count {
-  font-size: 11px !important;
-  color: var(--color-ink-soft) !important;
-  opacity: 0.7;
-  margin-top: 6px !important;
-}
-
-/* ── @zone:graph ── */
-.graph h3 {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: var(--color-ink) !important;
-  letter-spacing: 0.08em !important;
-  text-transform: none !important;
-  margin-bottom: 8px !important;
-}
-.graph .graph-container {
-  background: var(--color-surface-alt) !important;
-  border-color: var(--color-border) !important;
-  border-radius: 8px !important;
-}
-
-/* ── @zone:backlinks ── */
-.backlinks h3 {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: var(--color-ink) !important;
-  letter-spacing: 0.08em !important;
-  text-transform: none !important;
-  margin-bottom: 8px !important;
-}
-.backlinks a {
-  color: var(--color-ink-soft) !important;
-  font-size: 13px !important;
-  transition: color 0.15s;
-}
-.backlinks a:hover {
-  color: var(--color-accent) !important;
-}
-
-/* ── @zone:toc ── */
-.toc h3 {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: var(--color-ink) !important;
-  letter-spacing: 0.08em !important;
-  text-transform: none !important;
-  margin-bottom: 8px !important;
-}
-.toc a {
-  color: var(--color-ink-soft) !important;
-  font-size: 13px !important;
-  transition: color 0.15s;
-}
-.toc a:hover {
-  color: var(--color-accent) !important;
-}
-
-/* ── @zone:center ── */
-.center {
-  padding: 48px 48px !important;
-  background: var(--color-paper);
-}
-
-/* ── @zone:article-body ── */
-.article-body {
-  color: var(--color-ink-soft);
-}
-.article-body h1,
-.article-body h2 {
-  font-family: "Fraunces", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
-  font-weight: 400 !important;
-  color: var(--color-ink) !important;
-  letter-spacing: -0.01em;
-}
-.article-body h1 {
-  font-size: 36px !important;
-  line-height: 1.25;
-  margin-bottom: 20px;
-}
-.article-body h2 {
-  font-size: 24px !important;
-  line-height: 1.35;
-  margin-top: 36px !important;
-  margin-bottom: 14px !important;
-  padding-bottom: 10px !important;
-  border-bottom: 1px solid var(--color-border);
-}
-.article-body p {
-  font-size: 16px !important;
-  line-height: 1.9 !important;
-  color: var(--color-ink-soft) !important;
-  letter-spacing: 0.02em;
-  margin-bottom: 16px;
-}
-.article-body a {
-  color: var(--color-accent) !important;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.article-body a:hover {
-  color: var(--color-accent-hover) !important;
-}
-.article-body hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 32px 0;
-}
-
-/* ── @zone:right-sidebar ── */
-div[data-zone="right-sidebar"] {
-  display: none;
-}
-
-/* ── @zone:footer ── */
-.page-footer {
-  background: var(--color-footer) !important;
-  border-color: var(--color-footer) !important;
-  color: var(--color-gold-light) !important;
-  padding: 24px 40px !important;
-  font-size: 12px !important;
-  letter-spacing: 0.04em !important;
-}
-
-/* ── @zone:copyright ── */
-.footer-copyright {
-  color: var(--color-gold-light) !important;
-}
-
-/* ── @zone:build-info ── */
-span[data-zone="build-info"] {
-  color: var(--color-gold-light) !important;
-  opacity: 0.7;
-}
+/* @zone:viewport */
+/* @zone:topbar */
+/* @zone:left-sidebar */
+/* @zone:center */
+/* @zone:right-sidebar */
+/* @zone:footer */
+/* 视觉设计官的所有 CSS 写入此标签内，按 @zone 分区 */
 </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans">
@@ -340,68 +25,80 @@ span[data-zone="build-info"] {
 
   <!-- ═══════════ topbar ═══════════ -->
   <header class="page-header border-b border-stone-200 px-6 py-3" data-zone="topbar">
-    <!-- breadcrumb -->
     <nav class="breadcrumb-container text-sm text-stone-500 mb-1" data-zone="breadcrumb" aria-label="breadcrumbs">
-      <a href="#" class="hover:text-stone-700">Home</a>
+      <a href="#" class="hover:text-stone-700">首页</a>
       <span class="mx-1">/</span>
       <span>两口问茶</span>
     </nav>
-
-    <!-- article-title -->
     <h1 class="article-title text-2xl font-bold text-stone-900 mt-1" data-zone="article-title">两口问茶</h1>
-
-    <!-- site-subtitle -->
-    <p class="site-subtitle text-sm text-stone-500 mt-1" data-zone="site-subtitle">一壶两杯，对饮成趣</p>
-
-    <!-- content-meta -->
+    <p class="site-subtitle text-sm text-stone-500 mt-1" data-zone="site-subtitle">一壶两杯，对饮成趣。茶香氤氲间，话尽人间味。</p>
     <div class="content-meta text-xs text-stone-400 mt-2 flex gap-3" data-zone="content-meta">
       <span>2026-07-04</span>
       <span>·</span>
-      <span>阅读时间 3 分钟</span>
+      <span>阅读时间 5 分钟</span>
+      <span>·</span>
+      <span>3,200 字</span>
     </div>
-
-    <!-- tags -->
     <div class="tags flex gap-2 mt-1" data-zone="tags">
       <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">茶道</span>
       <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">品茗</span>
       <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">茶会</span>
       <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">器具</span>
       <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">乌龙</span>
+      <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">岩茶</span>
+      <span class="px-2 py-0.5 bg-stone-200 text-stone-600 text-xs rounded">茶经</span>
     </div>
   </header>
 
-  <!-- ═══════════ body: left + center + right ═══════════ -->
+  <!-- ═══════════ body: left + center ═══════════ -->
   <div id="quartz-body" class="flex flex-1">
 
     <!-- left-sidebar -->
     <aside class="left sidebar w-64 flex-shrink-0 border-r border-stone-200 p-4 space-y-5" data-zone="left-sidebar">
 
-      <!-- site-title -->
       <div class="page-title text-lg font-bold text-stone-900" data-zone="site-title">
         <a href="#" class="hover:text-amber-700 transition-colors">两口问茶</a>
       </div>
 
-      <!-- search -->
       <div class="search-container" data-zone="search">
         <input type="text" placeholder="搜索笔记..." class="w-full px-3 py-1.5 text-sm border border-stone-300 rounded bg-white focus:outline-none focus:ring-1 focus:ring-amber-400">
       </div>
 
-      <!-- darkmode-toggle -->
       <div class="darkmode-toggle flex items-center gap-2 text-sm text-stone-600" data-zone="theme-toggle">
         <button class="px-3 py-1 border border-stone-300 rounded hover:bg-stone-100 text-xs">🌙 暗色模式</button>
       </div>
 
-      <!-- explorer -->
       <nav class="explorer" data-zone="explorer">
         <h3 class="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-2">文件浏览</h3>
         <ul class="space-y-1 text-sm">
+          <!-- demo:start -->
           <li><a href="#" class="text-stone-600 hover:text-amber-700">📄 两口问茶茶会规程</a></li>
-          
-          <li class="folder-count text-xs text-stone-400 mt-1" data-zone="folder-count">共 4 个文件</li>
+          <li><a href="#" class="text-stone-600 hover:text-amber-700">📄 茶具选配指南</a>
+            <ul class="ml-3 mt-1 space-y-0.5">
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">紫砂壶养护</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">盖碗使用技法</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">公道杯的选择</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="text-stone-600 hover:text-amber-700">📄 四季茶单</a>
+            <ul class="ml-3 mt-1 space-y-0.5">
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">春·碧螺春</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">夏·龙井</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">秋·铁观音</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">冬·普洱</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="text-stone-600 hover:text-amber-700">📁 茶会记录</a>
+            <ul class="ml-3 mt-1 space-y-0.5">
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">2026 春茶会</a></li>
+              <li><a href="#" class="text-stone-500 hover:text-amber-700 text-xs">2026 夏茶会</a></li>
+            </ul>
+          </li>
+          <!-- demo:end -->
+          <li class="folder-count text-xs text-stone-400 mt-1" data-zone="folder-count">共 12 个文件</li>
         </ul>
       </nav>
 
-      <!-- graph -->
       <div class="graph" data-zone="graph">
         <h3 class="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-2">关系图谱</h3>
         <div class="graph-container border border-stone-200 rounded bg-white p-4 text-center text-xs text-stone-400">
@@ -409,21 +106,26 @@ span[data-zone="build-info"] {
         </div>
       </div>
 
-      <!-- backlinks -->
       <div class="backlinks" data-zone="backlinks">
         <h3 class="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-2">反向链接</h3>
         <ul class="text-sm text-stone-500 space-y-0.5">
-          
+          <!-- demo:start -->
+          <li><a href="#" class="hover:text-amber-700">← 茶具选配指南</a></li>
+          <li><a href="#" class="hover:text-amber-700">← 四季茶单</a></li>
+          <!-- demo:end -->
         </ul>
       </div>
 
-      <!-- toc -->
       <div class="toc" data-zone="toc">
         <h3 class="text-xs font-semibold text-stone-400 uppercase tracking-wide mb-2">目录</h3>
         <ul class="text-sm text-stone-500 space-y-0.5">
+          <!-- demo:start -->
           <li><a href="#" class="hover:text-amber-700">一、茶会宗旨</a></li>
           <li><a href="#" class="hover:text-amber-700">二、器具准备</a></li>
-          
+          <li><a href="#" class="hover:text-amber-700">三、冲泡流程</a></li>
+          <li><a href="#" class="hover:text-amber-700">四、品鉴要点</a></li>
+          <li><a href="#" class="hover:text-amber-700">五、茶席布置</a></li>
+          <!-- demo:end -->
         </ul>
       </div>
 
@@ -433,18 +135,65 @@ span[data-zone="build-info"] {
     <main class="center flex-1 p-6 max-w-3xl" data-zone="center">
 
       <article class="article-body prose prose-stone max-w-none" data-zone="article-body">
-        <p>茶，南方之嘉木也。一之源、二之具、三之造——陆羽《茶经》开篇便是对茶的本源追问。两口问茶，问的是茶，也是人心。</p>
+        <!-- demo:start -->
+        <p>茶，南方之嘉木也。一之源、二之具、三之造——陆羽《茶经》开篇便是对茶的本源追问。两口问茶，问的是茶，也是人心。茶不过两种姿态：浮、沉。饮茶人不过两种姿势：拿起、放下。一壶沸水，两盏清茶，三人对坐，四季流转——这便是两口问茶想要传递的茶会精神。</p>
+        <p>自 2023 年秋始，我们在杭州龙井村的一间老茶室里办起了第一次茶会。没有昂贵的器具，没有繁复的仪式。一张老木桌、几把竹椅、一壶新焙的龙井，三五个好友围坐，从午后喝到黄昏。茶汤从浓转淡，话头从茶道聊到人生——那一次之后，我们决定把这种简单的相聚，做成一个长久的习惯。</p>
 
-        
+        <h2>一、茶会宗旨</h2>
+        <p>以茶会友，以茶养心。每两周一会，轮流主泡。不问身份高低，只论茶汤厚薄。席间可谈天说地，亦可静默品饮。唯一规矩：手机静音，心神在席。</p>
+        <p>我们的茶会不讲排场。一壶好的龙井，不需要水晶杯来衬托；一杯好的普洱，不需要红木茶盘来加持。真正的好茶，三五百一斤足矣。真正好的茶会，三五知己足矣。</p>
 
-        <p>两口问茶，一口敬天地，一口敬自己。</p>
+        <h2>二、器具准备</h2>
+        <p>主泡自备茶器。基础配置：盖碗或紫砂壶一把、公道杯一只、品茗杯若干。茶席布置从简——一方茶巾、一盆清水、一枝时令花足矣。</p>
+        <p>选壶小诀窍：紫砂壶看三点——泥料是否纯正（色泽温润不刺眼）、壶盖是否严丝合缝（倒置不落）、出水是否流畅（七寸不散花）。不必追求名家款，一把三百元的手工壶，用上三五年，包浆自然温润如古玉。</p>
+        <p>盖碗则以白瓷为佳，胎薄、釉净、撇口大——不烫手、不夺香、不串味。景德镇的白瓷盖碗，百元上下，足以应付日常茶会。</p>
+
+        <h2>三、冲泡流程</h2>
+        <ol>
+          <li><strong>温器：</strong>沸水烫洗壶杯，既是清洁也是预热。水要注满，器要烫透——冷壶冲茶，香气减半。</li>
+          <li><strong>投茶：</strong>以茶则取茶，视人数而定——三人行五克为宜。投茶前先闻干香，这是品茶的第一口。</li>
+          <li><strong>润茶：</strong>沸水低注，没过茶叶即出，唤醒茶性。润茶水弃之不饮，但可观其色——清澈为上，浑浊则工艺有瑕。</li>
+          <li><strong>冲泡：</strong>高冲低斟，水流柔缓。首泡 15 秒出汤，逐泡递增 5 秒。注水时手腕微旋，让水流沿壶壁滑入，不直冲茶叶。</li>
+          <li><strong>分茶：</strong>公道杯均分，七分满——留下三分是人情。分茶顺序从左到右，不论尊卑，只论座次。</li>
+        </ol>
+
+        <h2>四、品鉴要点</h2>
+        <p>品茶四步：观色、闻香、品味、察底。汤色清澈为上，香气纯净为佳，滋味回甘为妙，叶底鲜活为真。不争高下，各抒所感。</p>
+        <p><strong>观色：</strong>举杯对光，看汤色深浅。龙井以嫩绿明亮为佳，岩茶以橙黄透亮为上，普洱以红浓透亮为妙。浑浊者必有工艺瑕疵。</p>
+        <p><strong>闻香：</strong>杯口靠近鼻尖，深嗅。好茶的香气有层次——前调的果香、中调的花香、尾调的蜜香。香气清幽不刺鼻，持久不散。</p>
+        <p><strong>品味：</strong>小口含漱，让茶汤充分接触舌面。好茶入口顺滑，回甘快。劣茶入口涩麻，舌面发紧——那是农残或工艺不当的信号。</p>
+        <p><strong>察底：</strong>泡过七八道后，将叶底倒在茶则上摊开。好的叶底柔软有弹性，色泽均匀。叶片破碎、色泽斑驳——原料或工艺有问题。</p>
+
+        <h2>五、茶席布置</h2>
+        <p>茶席布置三要素：简洁、入眼、顺手。一张素色茶巾铺底，茶器从左到右按使用顺序排列。左手边放茶则、茶针；正中放盖碗；右手边放公道杯；品茗杯置于客位方向。一盆清水置于茶席左侧——不是装饰，是洗杯用的。</p>
+        <p>时令花材的选法：春用桃花或迎春，三两枝斜插入小瓶；夏用荷花或栀子，一花一叶足矣；秋用桂花或菊花，取其清幽；冬用腊梅或山茶，一支独秀。花不在多，贵在合时。</p>
+
+        <blockquote>
+          <p>茶不过两种姿态：浮、沉。饮茶人不过两种姿势：拿起、放下。——佚名</p>
+          <p>坐酌泠泠水，看煎瑟瑟尘。无由持一碗，寄与爱茶人。——白居易《山泉煎茶有怀》</p>
+          <p>寒夜客来茶当酒，竹炉汤沸火初红。——杜耒《寒夜》</p>
+        </blockquote>
+
+        <h2>六、常见问题</h2>
+
+        <h3>新手选什么茶入门？</h3>
+        <p>建议从绿茶或乌龙茶开始。绿茶（龙井、碧螺春）香气清雅、滋味鲜爽，不容易踩雷。乌龙茶（铁观音、大红袍）香气丰富，可以让新手直接感受到茶的「层次感」。不建议从普洱生茶入手——苦涩重，容易劝退。</p>
+
+        <h3>泡茶水温怎么掌握？</h3>
+        <p>绿茶 80-85°C（水烧开后静置 2 分钟），乌龙茶 95-100°C（沸水直接冲），红茶 90-95°C，普洱茶 100°C（必须沸水）。最简单的方法：水烧开后，绿茶叶倒计时 120 秒再注水，其他茶倒计时 30 秒即可。</p>
+
+        <h3>茶具需要买很贵的吗？</h3>
+        <p>完全不需要。入门三件套——白瓷盖碗（50-100 元）、玻璃公道杯（30-50 元）、白瓷品茗杯（10-20 元/只）——总投入不到 200 元，足以泡出好茶。贵的是茶，不是器。</p>
+        <!-- demo:end -->
+
+        <p>两口问茶，一口敬天地，一口敬自己。欢迎你来，带上你的茶，带上你的故事。</p>
       </article>
 
     </main>
 
     <!-- right-sidebar (空——左中两栏) -->
     <aside class="right sidebar w-64 flex-shrink-0 border-l border-stone-200 p-4 hidden" data-zone="right-sidebar">
-      <!-- 左中两栏布局下右栏为空。文姬如需激活三栏，在此区域添加内容并移除 hidden -->
+      <!-- 左中两栏布局下右栏为空 -->
     </aside>
 
   </div>
