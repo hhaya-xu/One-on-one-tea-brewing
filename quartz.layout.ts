@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { default as SiteSubtitle } from "./quartz/components/SiteSubtitle"
 
 // 两口问茶 · 左中两栏 · Step 1 配置
 // 顶栏：站标题/副标题/导航/搜索 | 左栏：全部 | 中栏：全部 | 页脚：全部
@@ -15,6 +16,7 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs({ rootName: '首页' }),
     Component.ArticleTitle(),
+    SiteSubtitle(),
     Component.ContentMeta(),
     Component.TagList(),
   ],
