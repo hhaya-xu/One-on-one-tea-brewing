@@ -1,4 +1,4 @@
-﻿import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
 // 两口问茶 · 左中两栏 · Step 1 配置
@@ -13,7 +13,7 @@ export const sharedPageComponents: SharedLayout = {
 
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
+    Component.Breadcrumbs({ rootName: '首页' }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -32,7 +32,7 @@ export const defaultContentPageLayout: PageLayout = {
 }
 
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [Component.Breadcrumbs({ rootName: '首页' }), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
