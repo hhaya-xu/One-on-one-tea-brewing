@@ -1,6 +1,6 @@
 ﻿import { render } from "preact-render-to-string"
+import { Fragment } from "preact"
 import { QuartzComponent, QuartzComponentProps } from "./types"
-import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
 import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
@@ -127,9 +127,15 @@ function renderTranscludes(
               {
                 type: "element",
                 tagName: "a",
-                properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
+                properties: {
+                  href: inner.properties?.href,
+                  class: ["internal", "transclude-src"],
+                },
                 children: [
-                  { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
+                  {
+                    type: "text",
+                    value: i18n(cfg.locale).components.transcludes.linkToOriginal,
+                  },
                 ],
               },
             ]
@@ -170,9 +176,15 @@ function renderTranscludes(
             {
               type: "element",
               tagName: "a",
-              properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
+              properties: {
+                href: inner.properties?.href,
+                class: ["internal", "transclude-src"],
+              },
               children: [
-                { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
+                {
+                  type: "text",
+                  value: i18n(cfg.locale).components.transcludes.linkToOriginal,
+                },
               ],
             },
           ]
@@ -200,9 +212,15 @@ function renderTranscludes(
             {
               type: "element",
               tagName: "a",
-              properties: { href: inner.properties?.href, class: ["internal", "transclude-src"] },
+              properties: {
+                href: inner.properties?.href,
+                class: ["internal", "transclude-src"],
+              },
               children: [
-                { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
+                {
+                  type: "text",
+                  value: i18n(cfg.locale).components.transcludes.linkToOriginal,
+                },
               ],
             },
           ]
@@ -235,27 +253,9 @@ export function renderPage(
     pageBody: Content,
     afterBody,
     left,
-    right,
     footer: Footer,
   } = components
-  const Header = HeaderConstructor()
   const Body = BodyConstructor()
-
-  const LeftComponent = (
-    <div class="left sidebar">
-      {left.map((BodyComponent) => (
-        <BodyComponent {...componentData} />
-      ))}
-    </div>
-  )
-
-  const RightComponent = (
-    <div class="right sidebar">
-      {right.map((BodyComponent) => (
-        <BodyComponent {...componentData} />
-      ))}
-    </div>
-  )
 
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const direction = i18n(cfg.locale).direction ?? "ltr"
@@ -265,29 +265,31 @@ export function renderPage(
       <body data-slug={slug}>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
-            <div class="page-header">
-                <Header {...componentData}>
-                  {header.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
-                <div class="popover-hint">
+            <Fragment>
+              {header.map((HeaderComponent) => (
+                <HeaderComponent {...componentData} />
+              ))}
+            </Fragment>
+            <div class="oqc-main">
+              <aside class="left sidebar oqc-sidebar">
+                {left.map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </aside>
+              <main class="center oqc-content">
+                <Fragment>
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
                   ))}
-                </div>
+                </Fragment>
+                <Content {...componentData} />
+                <Fragment>
+                  {afterBody.map((BodyComponent) => (
+                    <BodyComponent {...componentData} />
+                  ))}
+                </Fragment>
+              </main>
             </div>
-            {LeftComponent}
-            <div class="center">
-              <Content {...componentData} />
-              <hr />
-              <div class="page-footer">
-                {afterBody.map((BodyComponent) => (
-                  <BodyComponent {...componentData} />
-                ))}
-              </div>
-            </div>
-            {RightComponent}
             <Footer {...componentData} />
           </Body>
         </div>

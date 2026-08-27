@@ -1,46 +1,40 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { FullPageLayout, PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
-import { default as SiteSubtitle } from "./quartz/components/SiteSubtitle"
-
-// 两口问茶 · 左中两栏 · Step 1 配置
-// 顶栏：站标题/副标题/导航/搜索 | 左栏：全部 | 中栏：全部 | 页脚：全部
+import OqcArticleTitle from "./quartz/components/oqc/ArticleTitle"
+import OqcBacklinksList from "./quartz/components/oqc/BacklinksList"
+import OqcBreadcrumbs from "./quartz/components/oqc/Breadcrumbs"
+import OqcContentMeta from "./quartz/components/oqc/ContentMeta"
+import OqcExplorerTree from "./quartz/components/oqc/ExplorerTree"
+import OqcFooterContent from "./quartz/components/oqc/FooterContent"
+import OqcGraphView from "./quartz/components/oqc/GraphView"
+import OqcSiteSubtitle from "./quartz/components/oqc/SiteSubtitle"
+import OqcTagList from "./quartz/components/oqc/TagList"
+import Topbar from "./quartz/components/oqc/Topbar"
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Topbar()],
   afterBody: [],
-  footer: Component.Footer({ links: { GitHub: "https://github.com/hhaya-xu/One-on-one-tea-brewing" } }),
+  footer: OqcFooterContent({
+    links: { GitHub: "https://github.com/hhaya-xu/One-on-one-tea-brewing" },
+  }),
 }
 
-export const defaultContentPageLayout: PageLayout = {
+export const defaultContentPageLayout: PageLayout & Pick<FullPageLayout, "afterBody"> = {
   beforeBody: [
-    Component.Breadcrumbs({ rootName: '首页' }),
-    Component.ArticleTitle(),
-    SiteSubtitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    OqcBreadcrumbs({ rootName: "首页" }),
+    OqcArticleTitle(),
+    OqcSiteSubtitle(),
+    OqcContentMeta(),
+    OqcTagList(),
   ],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
-    Component.DesktopOnly(Component.Graph()),
-    Component.DesktopOnly(Component.Backlinks()),
-    Component.DesktopOnly(Component.TableOfContents()),
-  ],
+  afterBody: [OqcBacklinksList(), OqcGraphView()],
+  left: [OqcExplorerTree()],
   right: [],
 }
 
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs({ rootName: '首页' }), Component.ArticleTitle(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
-  ],
+  beforeBody: [OqcBreadcrumbs({ rootName: "首页" }), OqcArticleTitle(), OqcContentMeta()],
+  left: [OqcExplorerTree()],
   right: [],
 }
