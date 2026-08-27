@@ -5,6 +5,15 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+
+export function resolveOqcResourcePath(baseDir: string, resourcePath: string): string {
+  if (!resourcePath.startsWith("/") || resourcePath.startsWith("//")) {
+    return resourcePath
+  }
+
+  return joinSegments(baseDir, resourcePath.slice(1))
+}
+
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -86,10 +95,22 @@ export default (() => {
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
-        {css.map((resource) => CSSResourceToStyleElement(resource, true))}
+        {css.map((resource) =>
+          CSSResourceToStyleElement(
+            { ...resource, content: resolveOqcResourcePath(baseDir, resource.content) },
+            true,
+          ),
+        )}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
-          .map((res) => JSResourceToScriptElement(res, true))}
+          .map((resource) =>
+            JSResourceToScriptElement(
+              resource.contentType === "external"
+                ? { ...resource, src: resolveOqcResourcePath(baseDir, resource.src) }
+                : resource,
+              true,
+            ),
+          )}
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
             return resource(fileData)

@@ -10,6 +10,7 @@ import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
 import { styleText } from "util"
+import { resolveOqcResourcePath } from "./Head"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -35,7 +36,10 @@ export function pageResources(
       {
         content: joinSegments(baseDir, "index.css"),
       },
-      ...staticResources.css,
+      ...staticResources.css.map((resource) => ({
+        ...resource,
+        content: resolveOqcResourcePath(baseDir, resource.content),
+      })),
     ],
     js: [
       {
@@ -49,7 +53,11 @@ export function pageResources(
         spaPreserve: true,
         script: contentIndexScript,
       },
-      ...staticResources.js,
+      ...staticResources.js.map((resource) =>
+        resource.contentType === "external"
+          ? { ...resource, src: resolveOqcResourcePath(baseDir, resource.src) }
+          : resource,
+      ),
     ],
     additionalHead: staticResources.additionalHead,
   }
