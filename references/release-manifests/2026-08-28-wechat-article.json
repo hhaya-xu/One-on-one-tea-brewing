@@ -1,0 +1,346 @@
+{
+  "schema": "oqc-publication-manifest/v1",
+  "version": 1,
+  "date": "2026-08-28",
+  "oqc": {
+    "version": "1.0.0",
+    "commit": "a7d51e0f0b9cf16dd2ddb81be9c7c1333a60b4a3",
+    "overlay": {
+      "matched": 32,
+      "expected": 32,
+      "targets": [
+        {
+          "path": "quartz/components/Body.tsx",
+          "sha256": "ae3a5ac4806b011fdc573f7c619c8477aafa72bba42da53ef1f9082acce2e18f"
+        },
+        {
+          "path": "quartz/components/Darkmode.tsx",
+          "sha256": "7d15e66c0d682bdcd4dc62fe7449eca185ff297719e31f6f8ed4b61e23496b5a"
+        },
+        {
+          "path": "quartz/components/Head.tsx",
+          "sha256": "9c2c2ca00452e97038755ab1d60da6e42a0de150776abd39585590b18725882a"
+        },
+        {
+          "path": "quartz/components/oqc/ArticleBody.tsx",
+          "sha256": "5edbf8c1a6b0afb3796cc73c76efcb0ee3660dfa3376426c087cd927e52118af"
+        },
+        {
+          "path": "quartz/components/oqc/ArticleTitle.tsx",
+          "sha256": "4a4ac443db67acc1ac446320083086be92c11a361f3ac67ae7ba75a814e66d5e"
+        },
+        {
+          "path": "quartz/components/oqc/BacklinksList.tsx",
+          "sha256": "f9fd6851e653f91a1de1e6756daad6ff089e0c3f5386949d1139426d8aaf6e1f"
+        },
+        {
+          "path": "quartz/components/oqc/Breadcrumbs.tsx",
+          "sha256": "b6c10bb0b27401e1a07c8814e921e2d78f19ca896a9cac0cd84e1c7b5b8e13d2"
+        },
+        {
+          "path": "quartz/components/oqc/ContentMeta.tsx",
+          "sha256": "f2429536d29dfcb762b460d561ca5ee267207636cb339a4b2eb2d36526f9b487"
+        },
+        {
+          "path": "quartz/components/oqc/DarkmodeToggle.tsx",
+          "sha256": "f25cdf4468859bf75fde4756edc8c0728879b40a269efedac72dfc7d6eaebdc0"
+        },
+        {
+          "path": "quartz/components/oqc/ExplorerTree.tsx",
+          "sha256": "e9ce0234114df366fb9e49f0f1619d4efb098e67363d5d2bb35040f99f36a560"
+        },
+        {
+          "path": "quartz/components/oqc/FooterContent.tsx",
+          "sha256": "25b216626f51cfe7a4162b1f4fae5dd806a6a08d4e4dcea8418b9e885e0106dd"
+        },
+        {
+          "path": "quartz/components/oqc/GraphView.tsx",
+          "sha256": "42077c8d46c9967d802e387adc996025785a21c99b4493af78c878da229524d2"
+        },
+        {
+          "path": "quartz/components/oqc/HeaderLayout.tsx",
+          "sha256": "43a35320990eb912dc0454b21d71115a7d05790f3534dd40db040e24c2faba81"
+        },
+        {
+          "path": "quartz/components/oqc/hoc/Section.tsx",
+          "sha256": "f30534cea50a1ba00f76380dd7d2d9f2d282b23a5d0adb1f54e404b1016f3797"
+        },
+        {
+          "path": "quartz/components/oqc/hoc/Stack.tsx",
+          "sha256": "9248977bb8e4bbd079255ce2d23f97ed823d44a9bcff8ac1d66c399f91cd4c99"
+        },
+        {
+          "path": "quartz/components/oqc/OneColumnLayout.tsx",
+          "sha256": "86dc3d69893cf3379b13c91a2c1ab55a04c6df35046e0e0d00bd5ad4095859c2"
+        },
+        {
+          "path": "quartz/components/oqc/RecentNotes.tsx",
+          "sha256": "18888580b7bd32c9527ec3cdf9b9481f4e44f5d23179a1a1036cb49f3eb609fb"
+        },
+        {
+          "path": "quartz/components/oqc/SearchToggle.tsx",
+          "sha256": "bc4b50225c61dfa05a83a72263505f257210b515fc7b18b619a3c8590fda67c3"
+        },
+        {
+          "path": "quartz/components/oqc/SiteSubtitle.tsx",
+          "sha256": "6cd173ce29aade461b8b8b6f4ce59207ad6a845b40bbd780bae2e147109fd2d5"
+        },
+        {
+          "path": "quartz/components/oqc/SiteTitle.tsx",
+          "sha256": "841c2d2cf1b4dd7e25025feb1c88233371508f560537faeaa13a7c6759089131"
+        },
+        {
+          "path": "quartz/components/oqc/TableOfContents.tsx",
+          "sha256": "a7da0fdf94dac28cbdc737f7af4cc461fdee7691e0be59fb5859c69340371f6a"
+        },
+        {
+          "path": "quartz/components/oqc/TagList.tsx",
+          "sha256": "e9a69be4d51c62e12f078976a4d14c6aebbbaa83c1ff2f6c9300a9f03123ebbd"
+        },
+        {
+          "path": "quartz/components/oqc/ThreeColumn.tsx",
+          "sha256": "d1d7153e3d3f2129849a711279f580a731f572ce81463f1f1bc581a2bd02eb3d"
+        },
+        {
+          "path": "quartz/components/oqc/Topbar.tsx",
+          "sha256": "ee6c900b53af1e0651f9bdfcf53456316e20452e15cf596a64db4249f4699669"
+        },
+        {
+          "path": "quartz/components/oqc/TwoColumnLeft.tsx",
+          "sha256": "5b6da6d77092715dc6511cff33208d0a66bea2eab43debf3e60aa211d57ee6e0"
+        },
+        {
+          "path": "quartz/components/oqc/TwoColumnRight.tsx",
+          "sha256": "a26e1f16bb56a282544f4fd626f1e78e56e203d8c3aa54379627568c3d1bbebd"
+        },
+        {
+          "path": "quartz/components/pages/Content.tsx",
+          "sha256": "2ad1b9be290889a2d99a0c0efca5b2d5ae9049994379df719a2ce20752e1fffe"
+        },
+        {
+          "path": "quartz/components/renderPage.tsx",
+          "sha256": "a889456a6934dcfce0f131bd6a66d5eda22c7adb08bf27bdc7befacee3ed88de"
+        },
+        {
+          "path": "quartz/components/Search.tsx",
+          "sha256": "55128e36ad42c67f371739208369669bbce26b5fa675c861fc0b32681d320cdb"
+        },
+        {
+          "path": "quartz/styles/custom.scss",
+          "sha256": "7188d59fd9b88a51c1001e1af79ad3b11046d47a2071cb79211b20c6b8aaa49f"
+        },
+        {
+          "path": "quartz/styles/oqc-theme-tokens.scss",
+          "sha256": "6b9623221ec9f87373dfb047bac90ed50cdcb965eb7134c3b68edbf1026bf49a"
+        },
+        {
+          "path": "quartz/styles/oqc-visual.scss",
+          "sha256": "c3c7cee8ad1571fae3704a83f8d9395e12aaf17a6c34e70b6c117681c7e67818"
+        }
+      ]
+    }
+  },
+  "vaultAuthority": {
+    "commit": "bc85a08"
+  },
+  "article": {
+    "path": "content/资料/公众号文章/茶山风水行-研学布朗2018.md",
+    "sourceAuthoritySha256": "0176279dc1c69372ef6e2975d2b16ac243c4d95f12e049f19d08a69dc50b2dff",
+    "targetSha256": "f67c37d9fc4ca605b9e5544764a12f36e3f1d5dc347eeef15d0e225f374d4189",
+    "copyStatus": "public-link-normalized-copy",
+    "normalizedImageLinks": 36
+  },
+  "images": {
+    "count": 36,
+    "allByteEqual": true,
+    "targets": [
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/001.jpg",
+        "sha256": "1410df063b43841b5c91a092ec4f57c9557b9d5bab70fd40d79bb4435c146467"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/002.jpg",
+        "sha256": "f9e02996ff7624db11b93fc18a04461581b7b11c064f5a585b7146cccffd5e0e"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/003.jpg",
+        "sha256": "5d236cfa6e612fb02709074bc9332ed0b9670e47ac8a19e29ed0464c8be4d1c6"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/004.jpg",
+        "sha256": "0ca4ed93441ed9d735d48acb15ab54c6784760499ed550264a2bb25fc09db552"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/005.jpg",
+        "sha256": "7dbbc5625dac187c47ddbc042163ea5ed81a31fd98addab26fc651768f030eca"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/006.jpg",
+        "sha256": "538d6dd12960893a9a85021b7632489b14cace84f71bcec716d109f522aa56a0"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/007.jpg",
+        "sha256": "58d060ac11d2b824972ffcb32af0a2c0649a55bf525a2481692e06c7a6ec9528"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/008.jpg",
+        "sha256": "eb72f92accae58a27d02bef9557e40793cf132c88b6f0b90c00fd9aded65b84f"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/009.jpg",
+        "sha256": "fced769745762363ed4798a7d5291b033dd6855095cda7bf5e67d5b9eeb29288"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/010.jpg",
+        "sha256": "5ea1e6af905e8e17ef6c927f96256fa480c34e39282fb62ed3c7d5545d3c1a75"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/011.jpg",
+        "sha256": "2bbe83497c2bf44f55c464ff683a48cdaf5cd9e77084aea1f2b90b277ebc527d"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/012.jpg",
+        "sha256": "c10d8717b40321bd37e845f1059ecb28f8ce04c6ac185ade8e84b2fc69864533"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/013.jpg",
+        "sha256": "4e89ba58bc165c38f556669af6bedcccda94fbfafcac454ea4f873d9f118ad70"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/014.jpg",
+        "sha256": "3f192260cae85ecb5e2c8571e2941ef782e6a0d2b53684c23ec5821b62b5b744"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/015.jpg",
+        "sha256": "d5d7851be10bba2caf31913e12f6fc50c5fa745814ea98599d99496ddbce681a"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/016.jpg",
+        "sha256": "d4f37106a64dee35793b0b3d4e0a59bf99730d5535217589c5907d948596255f"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/017.jpg",
+        "sha256": "1cce8bb7a6dfe836dab0e5363f5c52f5722644e010d63ab986aeddee8ef3812a"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/018.jpg",
+        "sha256": "1d736b868141da48d51eec8e3fafeaf55f7649bba151a4bf12a58e34d1e4a119"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/019.jpg",
+        "sha256": "663e638e0a70345490ae688f16a2049efcbd81a3452c1e73f65ba81e40392751"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/020.jpg",
+        "sha256": "40c635028854501b26e8036f794e7b84028d364eef5ad574186400e6c3feee5d"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/021.jpg",
+        "sha256": "56b074fa0a468d0f1114dc1c0d5ecd063b56633c4e1dbfd9a47826dec99bcb6b"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/022.jpg",
+        "sha256": "0032e51051f739df35462094cd87001ae583967b0f5f3e2c74d75d89f8ae531c"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/023.jpg",
+        "sha256": "c12f6d28fb18ee6373639f536bb4832f128fc81113a70c11c7af6e3c49b8df49"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/024.jpg",
+        "sha256": "7ec124ef8ec1b230f6f3d4eb699e919e230db45855bdd2f542c92d893eba8ac6"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/025.jpg",
+        "sha256": "fdb4b44e0ff0f61fb0ecf430f1651b7e8c1f0139eb6721596ffd1204440e683c"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/026.jpg",
+        "sha256": "f91c5fa926246a413c49b2296420c5b81c1052f57fcc10e2889b7dff0b16303c"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/027.jpg",
+        "sha256": "9ae2cdf6fc40adc30a08bd62323681379b70bf6d757c95e7b6739d81b78e6fff"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/028.jpg",
+        "sha256": "d61d6f849d4133e8e7fe7f3c2eb08934895bd77a168e010703dbe4d90f3f59df"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/029.jpg",
+        "sha256": "e303e36ec150ff8daa4c88e8148f1fa35bb43ad66c1e91b782fdd999ff675bae"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/030.jpg",
+        "sha256": "c53f481a7378450fd3ee501fcacb9dcab67567a5182fcb1b50016f5e6b0f56fa"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/031.jpg",
+        "sha256": "c7f179070a0182f6645e91eb27e4517d6a7e67a35d1f0788a9c459c7eac5fa8d"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/032.jpg",
+        "sha256": "72a9f49abc7d0152d8fbc23e9d6ad7c4841bcd2a59587af029cf373606ec13c6"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/033.jpg",
+        "sha256": "6100348ddeb4c4860553bfc721da2001950afe68f53332dc88b0626d3e5b3c4b"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/034.jpg",
+        "sha256": "6ca1c1d3720b38839d7af6e4fa19cf9e474f73b59ea67855ddbf8d3687eff01d"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/035.jpg",
+        "sha256": "eb1abf5dced8ea907d2cc87c4e00f90196bd59f0932f63ca1d69dceb291f68b6"
+      },
+      {
+        "path": "content/attachments/茶山风水行-研学布朗2018/036.jpg",
+        "sha256": "0b897dfc543f0c49338a693219c3dd68010a764b3164411d5d2747aea4d71816"
+      }
+    ]
+  },
+  "homepage": {
+    "path": "content/index.md",
+    "sha256": "7842b6674f9dd0e98e335868c04708c4116427f471bc1e1d2fd5041bcec472a8"
+  },
+  "fontOriginPatch": "googleFonts-\u003elocal",
+  "technicalStatus": "PASS",
+  "validationScheme": "C",
+  "originBaselinePrettierDebtCount": 12,
+  "currentPlanningBranchPrettierDebtCount": 13,
+  "planningOnlyDebtCount": 1,
+  "planningOnlyDebtPath": "docs/superpowers/plans/2026-08-28-oqc-v1-publish-wechat-article.md",
+  "fullRepositoryPrettier": "CURRENT_KNOWN_BASELINE_FAIL_13",
+  "formatGate": {
+    "mode": "site-owned-candidate-text-plus-frozen-byte-lock",
+    "siteOwnedCandidateTextPrettier": {
+      "status": "PASS",
+      "count": 5
+    },
+    "frozenOqcOverlay": {
+      "prettier": "NOT_APPLICABLE_BYTE_LOCKED",
+      "count": 32,
+      "hashMatch": 32
+    }
+  },
+  "typescript": "PASS",
+  "tests": {
+    "passed": 73,
+    "total": 73
+  },
+  "build": {
+    "inputs": 5,
+    "outputs": 66
+  },
+  "basePathSafe": 36,
+  "pixiException": {
+    "scope": "approved upstream template tokens only",
+    "approvedTemplateTokenCount": 24,
+    "unresolvedOutsideException": 0
+  },
+  "leakScan": "PASS",
+  "visualApproval": false,
+  "releaseApproval": false,
+  "telephonePublicationStatus": "pending"
+}

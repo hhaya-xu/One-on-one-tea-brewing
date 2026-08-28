@@ -1,4 +1,4 @@
-﻿import { QuartzConfig } from "./quartz/cfg"
+import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
@@ -12,13 +12,9 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
-      typography: {
-        header: "Noto Serif SC",
-        body: "Inter",
-        code: "IBM Plex Mono",
-      },
+      typography: { header: "Noto Serif SC", body: "Inter", code: "IBM Plex Mono" },
       colors: {
         lightMode: {
           light: "#faf8f8",
@@ -49,9 +45,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({ priority: ["frontmatter", "filesystem"] }),
-      Plugin.SyntaxHighlighting({
-        theme: { light: "github-light", dark: "github-dark" },
-      }),
+      Plugin.SyntaxHighlighting({ theme: { light: "github-light", dark: "github-dark" } }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),

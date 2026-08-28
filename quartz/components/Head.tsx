@@ -1,17 +1,32 @@
-import { i18n } from "../i18n"
-import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
-import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
-import { googleFontHref, googleFontSubsetHref } from "../util/theme"
-import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import { unescapeHTML } from "../util/escape"
-import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+import { i18n } from "../i18n";
+import {
+  FullSlug,
+  getFileExtension,
+  joinSegments,
+  pathToRoot,
+} from "../util/path";
+import {
+  CSSResourceToStyleElement,
+  JSResourceToScriptElement,
+} from "../util/resources";
+import { googleFontHref, googleFontSubsetHref } from "../util/theme";
+import {
+  QuartzComponent,
+  QuartzComponentConstructor,
+  QuartzComponentProps,
+} from "./types";
+import { unescapeHTML } from "../util/escape";
+import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage";
 
-export function resolveOqcResourcePath(baseDir: string, resourcePath: string): string {
+export function resolveOqcResourcePath(
+  baseDir: string,
+  resourcePath: string,
+): string {
   if (!resourcePath.startsWith("/") || resourcePath.startsWith("//")) {
-    return resourcePath
+    return resourcePath;
   }
 
-  return joinSegments(baseDir, resourcePath.slice(1))
+  return joinSegments(baseDir, resourcePath.slice(1));
 }
 
 export default (() => {
@@ -21,29 +36,35 @@ export default (() => {
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
-    const titleSuffix = cfg.pageTitleSuffix ?? ""
+    const titleSuffix = cfg.pageTitleSuffix ?? "";
     const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) +
+      titleSuffix;
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
-      unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
+      unescapeHTML(
+        fileData.description?.trim() ??
+          i18n(cfg.locale).propertyDefaults.description,
+      );
 
-    const { css, js, additionalHead } = externalResources
+    const { css, js, additionalHead } = externalResources;
 
-    const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
-    const path = url.pathname as FullSlug
-    const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
-    const iconPath = joinSegments(baseDir, "static/icon.png")
+    const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`);
+    const path = url.pathname as FullSlug;
+    const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!);
+    const iconPath = joinSegments(baseDir, "static/icon.png");
 
     // Url of current page
     const socialUrl =
-      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+      fileData.slug === "404"
+        ? url.toString()
+        : joinSegments(url.toString(), fileData.slug!);
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
-    )
-    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    );
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`;
 
     return (
       <head>
@@ -55,7 +76,10 @@ export default (() => {
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link rel="stylesheet" href={googleFontHref(cfg.theme)} />
             {cfg.theme.typography.title && (
-              <link rel="stylesheet" href={googleFontSubsetHref(cfg.theme, cfg.pageTitle)} />
+              <link
+                rel="stylesheet"
+                href={googleFontSubsetHref(cfg.theme, cfg.pageTitle)}
+              />
             )}
           </>
         )}
@@ -97,7 +121,10 @@ export default (() => {
 
         {css.map((resource) =>
           CSSResourceToStyleElement(
-            { ...resource, content: resolveOqcResourcePath(baseDir, resource.content) },
+            {
+              ...resource,
+              content: resolveOqcResourcePath(baseDir, resource.content),
+            },
             true,
           ),
         )}
@@ -106,21 +133,24 @@ export default (() => {
           .map((resource) =>
             JSResourceToScriptElement(
               resource.contentType === "external"
-                ? { ...resource, src: resolveOqcResourcePath(baseDir, resource.src) }
+                ? {
+                    ...resource,
+                    src: resolveOqcResourcePath(baseDir, resource.src),
+                  }
                 : resource,
               true,
             ),
           )}
         {additionalHead.map((resource) => {
           if (typeof resource === "function") {
-            return resource(fileData)
+            return resource(fileData);
           } else {
-            return resource
+            return resource;
           }
         })}
       </head>
-    )
-  }
+    );
+  };
 
-  return Head
-}) satisfies QuartzComponentConstructor
+  return Head;
+}) satisfies QuartzComponentConstructor;

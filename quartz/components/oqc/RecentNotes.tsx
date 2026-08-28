@@ -1,14 +1,18 @@
-﻿import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../types"
-import { resolveRelative } from "../../util/path"
-import { byDateAndAlphabetical } from "../PageList"
-import { Date, getDate } from "../Date"
-import { i18n } from "../../i18n"
-import { classNames } from "../../util/lang"
+﻿import {
+  QuartzComponent,
+  QuartzComponentConstructor,
+  QuartzComponentProps,
+} from "../types";
+import { resolveRelative } from "../../util/path";
+import { byDateAndAlphabetical } from "../PageList";
+import { Date, getDate } from "../Date";
+import { i18n } from "../../i18n";
+import { classNames } from "../../util/lang";
 
 interface Opts {
-  title?: string
-  limit?: number
-  showTags?: boolean
+  title?: string;
+  limit?: number;
+  showTags?: boolean;
 }
 export default ((userOpts?: Partial<Opts>) => {
   const RecentNotes: QuartzComponent = ({
@@ -17,9 +21,9 @@ export default ((userOpts?: Partial<Opts>) => {
     displayClass,
     cfg,
   }: QuartzComponentProps) => {
-    const opts = { limit: 3, showTags: true, ...userOpts }
-    const pages = allFiles.filter(() => true).sort(byDateAndAlphabetical(cfg))
-    const remaining = Math.max(0, pages.length - opts.limit)
+    const opts = { limit: 3, showTags: true, ...userOpts };
+    const pages = allFiles.filter(() => true).sort(byDateAndAlphabetical(cfg));
+    const remaining = Math.max(0, pages.length - opts.limit);
     return (
       <div class={classNames(displayClass, "oqc-recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentNotes.title}</h3>
@@ -49,7 +53,7 @@ export default ((userOpts?: Partial<Opts>) => {
           </p>
         )}
       </div>
-    )
-  }
-  return RecentNotes
-}) satisfies QuartzComponentConstructor
+    );
+  };
+  return RecentNotes;
+}) satisfies QuartzComponentConstructor;

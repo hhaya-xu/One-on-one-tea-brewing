@@ -116,7 +116,11 @@
   .oqc-search-btn.search-button:focus-visible,
   .oqc-theme-btn.darkmode:hover,
   .oqc-theme-btn.darkmode:focus-visible {
-    background-color: color-mix(in srgb, var(--oqc-topbar-text) 8%, transparent);
+    background-color: color-mix(
+      in srgb,
+      var(--oqc-topbar-text) 8%,
+      transparent
+    );
     color: var(--oqc-topbar-text);
   }
 
@@ -851,15 +855,22 @@
     caret-color: var(--oqc-accent);
     font-family: var(--oqc-font-body);
     font-size: 1rem;
-    box-shadow: 0 0.5rem 1.5rem color-mix(in srgb, var(--oqc-topbar-bg) 18%, transparent);
+    box-shadow: 0 0.5rem 1.5rem
+      color-mix(in srgb, var(--oqc-topbar-bg) 18%, transparent);
   }
 
-  .search > .search-container.active > .search-space > .search-bar::placeholder {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-bar::placeholder {
     color: var(--oqc-text-muted);
     opacity: 0.8;
   }
 
-  .search > .search-container.active > .search-space > .search-bar:focus-visible {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-bar:focus-visible {
     border-color: var(--oqc-focus-ring);
     outline: var(--oqc-border-width) solid var(--oqc-focus-ring);
     outline-offset: 2px;
@@ -871,15 +882,21 @@
     border: var(--oqc-border-width) solid var(--oqc-border);
     border-radius: var(--oqc-radius-md);
     color: var(--oqc-text);
-    box-shadow: 0 1rem 3rem color-mix(in srgb, var(--oqc-topbar-bg) 24%, transparent);
+    box-shadow: 0 1rem 3rem
+      color-mix(in srgb, var(--oqc-topbar-bg) 24%, transparent);
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card {
     display: block;
     margin: 0.35rem;
     padding: 0.8rem 1rem;
     background: var(--oqc-elevated-bg);
-    border: var(--oqc-border-width) solid color-mix(in srgb, var(--oqc-border) 72%, transparent);
+    border: var(--oqc-border-width) solid
+      color-mix(in srgb, var(--oqc-border) 72%, transparent);
     border-radius: var(--oqc-radius-sm);
     color: var(--oqc-text);
     font-family: var(--oqc-font-body);
@@ -891,36 +908,70 @@
       transform 150ms ease;
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card:hover,
-  .search > .search-container.active > .search-space > .search-layout .result-card:focus-visible,
-  .search > .search-container.active > .search-space > .search-layout .result-card.focus {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card:hover,
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card:focus-visible,
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card.focus {
     background: var(--oqc-hover-bg);
     border-color: var(--oqc-accent);
     color: var(--oqc-text);
     transform: translateY(-1px);
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card:focus-visible,
-  .search > .search-container.active > .search-space > .search-layout .result-card.focus {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card:focus-visible,
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card.focus {
     outline: var(--oqc-border-width) solid var(--oqc-focus-ring);
     outline-offset: 2px;
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card h3 {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card
+    h3 {
     margin: 0 0 0.35rem;
     color: var(--oqc-heading);
     font-family: var(--oqc-font-heading);
     font-size: 1rem;
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card p {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card
+    p {
     margin: 0;
     color: var(--oqc-text-muted);
     font-size: 0.82rem;
     line-height: 1.6;
   }
 
-  .search > .search-container.active > .search-space > .search-layout .result-card.no-match {
+  .search
+    > .search-container.active
+    > .search-space
+    > .search-layout
+    .result-card.no-match {
     background: var(--oqc-elevated-bg);
     border-style: dashed;
     color: var(--oqc-text-muted);
@@ -1011,7 +1062,8 @@
     background: var(--oqc-overlay-bg);
     border: var(--oqc-border-width) solid var(--oqc-border);
     border-radius: var(--oqc-radius-md);
-    box-shadow: 0 1rem 3rem color-mix(in srgb, var(--oqc-topbar-bg) 28%, transparent);
+    box-shadow: 0 1rem 3rem
+      color-mix(in srgb, var(--oqc-topbar-bg) 28%, transparent);
   }
 
   /* Popover */
@@ -1214,7 +1266,8 @@
     }
 
     /* Quartz mobile Explorer is converted from an overlay drawer to contract document flow. */
-    #quartz-body.oqc-layout > :not(.oqc-sidebar.sidebar.left:has(.oqc-explorer)) {
+    #quartz-body.oqc-layout
+      > :not(.oqc-sidebar.sidebar.left:has(.oqc-explorer)) {
       transform: none;
       transition: none;
     }
@@ -1231,7 +1284,10 @@
       overflow: visible;
     }
 
-    #quartz-body.oqc-layout .oqc-sidebar.sidebar.left:has(.oqc-explorer) .oqc-explorer .explorer {
+    #quartz-body.oqc-layout
+      .oqc-sidebar.sidebar.left:has(.oqc-explorer)
+      .oqc-explorer
+      .explorer {
       flex: 0 1 auto;
       align-self: stretch;
       width: 100%;
