@@ -146,8 +146,9 @@
   "article": {
     "path": "content/资料/公众号文章/茶山风水行-研学布朗2018.md",
     "sourceAuthoritySha256": "0176279dc1c69372ef6e2975d2b16ac243c4d95f12e049f19d08a69dc50b2dff",
-    "targetSha256": "f67c37d9fc4ca605b9e5544764a12f36e3f1d5dc347eeef15d0e225f374d4189",
-    "copyStatus": "public-link-normalized-copy",
+    "targetSha256": "f67aafc1a344d89bf5d39bcee444df2a2147823df620a423bdbf012d212d326d",
+    "copyStatus": "public-link-normalized-and-phone-redacted-copy",
+    "articleByteEqual": false,
     "normalizedImageLinks": 36
   },
   "images": {
@@ -340,7 +341,9 @@
     "unresolvedOutsideException": 0
   },
   "leakScan": "PASS",
-  "visualApproval": false,
-  "releaseApproval": false,
-  "telephonePublicationStatus": "pending"
+  "visualApproval": true,
+  "visualApprovalMethod": "human-local-review",
+  "assetHttpStatus": "36/36",
+  "releaseApproval": true,
+  "telephonePublicationStatus": "redacted-public-copy"
 }
