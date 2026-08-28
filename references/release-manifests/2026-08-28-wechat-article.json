@@ -309,10 +309,10 @@
   "technicalStatus": "PASS",
   "validationScheme": "C",
   "originBaselinePrettierDebtCount": 12,
-  "currentPlanningBranchPrettierDebtCount": 13,
+  "releaseBranchPrettierDebtCount": 12,
+  "auditedPlanningBranchPrettierDebtCount": 13,
   "planningOnlyDebtCount": 1,
-  "planningOnlyDebtPath": "docs/superpowers/plans/2026-08-28-oqc-v1-publish-wechat-article.md",
-  "fullRepositoryPrettier": "CURRENT_KNOWN_BASELINE_FAIL_13",
+  "fullRepositoryPrettierStatus": "KNOWN_BASELINE_FAIL_12",
   "formatGate": {
     "mode": "site-owned-candidate-text-plus-frozen-byte-lock",
     "siteOwnedCandidateTextPrettier": {
