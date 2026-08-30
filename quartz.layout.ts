@@ -1,26 +1,25 @@
-import { FullPageLayout, PageLayout, SharedLayout } from "./quartz/cfg"
-import * as Component from "./quartz/components"
-import OqcArticleTitle from "./quartz/components/oqc/ArticleTitle"
-import OqcBacklinksList from "./quartz/components/oqc/BacklinksList"
-import OqcBreadcrumbs from "./quartz/components/oqc/Breadcrumbs"
-import OqcContentMeta from "./quartz/components/oqc/ContentMeta"
-import OqcExplorerTree from "./quartz/components/oqc/ExplorerTree"
-import OqcFooterContent from "./quartz/components/oqc/FooterContent"
-import OqcGraphView from "./quartz/components/oqc/GraphView"
-import OqcSiteSubtitle from "./quartz/components/oqc/SiteSubtitle"
-import OqcTagList from "./quartz/components/oqc/TagList"
-import Topbar from "./quartz/components/oqc/Topbar"
+import { FullPageLayout, PageLayout, SharedLayout } from "./quartz/cfg";
+import * as Component from "./quartz/components";
+import OqcArticleTitle from "./quartz/components/oqc/ArticleTitle";
+import OqcBacklinksList from "./quartz/components/oqc/BacklinksList";
+import OqcBreadcrumbs from "./quartz/components/oqc/Breadcrumbs";
+import OqcContentMeta from "./quartz/components/oqc/ContentMeta";
+import OqcExplorerTree from "./quartz/components/oqc/ExplorerTree";
+import OqcFooterContent from "./quartz/components/oqc/FooterContent";
+import OqcGraphView from "./quartz/components/oqc/GraphView";
+import OqcSiteSubtitle from "./quartz/components/oqc/SiteSubtitle";
+import OqcTagList from "./quartz/components/oqc/TagList";
+import Topbar from "./quartz/components/oqc/Topbar";
 
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [Topbar()],
   afterBody: [],
-  footer: OqcFooterContent({
-    links: { GitHub: "https://github.com/hhaya-xu/One-on-one-tea-brewing" },
-  }),
-}
+  footer: OqcFooterContent({ links: { GitHub: "https://github.com/hhaya-xu/One-on-one-tea-brewing" } }),
+};
 
-export const defaultContentPageLayout: PageLayout & Pick<FullPageLayout, "afterBody"> = {
+export const defaultContentPageLayout: PageLayout &
+  Pick<FullPageLayout, "afterBody"> = {
   beforeBody: [
     OqcBreadcrumbs({ rootName: "首页" }),
     OqcArticleTitle(),
@@ -31,10 +30,14 @@ export const defaultContentPageLayout: PageLayout & Pick<FullPageLayout, "afterB
   afterBody: [OqcBacklinksList(), OqcGraphView()],
   left: [OqcExplorerTree()],
   right: [],
-}
+};
 
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [OqcBreadcrumbs({ rootName: "首页" }), OqcArticleTitle(), OqcContentMeta()],
+  beforeBody: [
+    OqcBreadcrumbs({ rootName: "首页" }),
+    OqcArticleTitle(),
+    OqcContentMeta(),
+  ],
   left: [OqcExplorerTree()],
   right: [],
-}
+};
