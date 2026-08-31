@@ -5,12 +5,12 @@ import test from "node:test"
 import { FullSlug, transformLink } from "./path"
 
 const articleName = "茶山风水行-研学布朗2018"
-const articlePath = path.join("content", "资料", "公众号文章", `${articleName}.md`)
+const articlePath = path.join("content", "其他茶会", `${articleName}.md`)
 const attachmentDirectory = path.join("content", "attachments", articleName)
-const articleSlug = `资料/公众号文章/${articleName}` as FullSlug
+const articleSlug = `其他茶会/${articleName}` as FullSlug
 const repositoryBasePath = "/One-on-one-tea-brewing"
 const expectedAssetPath = `${repositoryBasePath}/attachments/${articleName}/`
-const documentUrl = `https://hhaya-xu.github.io${repositoryBasePath}/资料/公众号文章/${articleName}`
+const documentUrl = `https://hhaya-xu.github.io${repositoryBasePath}/其他茶会/${articleName}`
 
 const markdown = fs.readFileSync(articlePath, "utf8")
 const imageTargets = [...markdown.matchAll(/!\[[^\]]*\]\(([^)]+\.jpg)\)/g)].map((match) => match[1])
