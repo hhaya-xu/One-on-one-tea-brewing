@@ -4,7 +4,9 @@ import {
   QuartzComponentConstructor,
   QuartzComponentProps,
 } from "../types";
-const NativeGraph = Graph();
+// Show the complete knowledge-base graph in the site view instead of the
+// default one-hop page neighbourhood.
+const NativeGraph = Graph({ localGraph: { depth: -1 } });
 const GraphView: QuartzComponent = (props: QuartzComponentProps) => {
   return (
     <section class="oqc-graph">
