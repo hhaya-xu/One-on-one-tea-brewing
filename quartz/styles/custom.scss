@@ -1,6 +1,8 @@
 @use "./base.scss";
 @use "./oqc-theme-tokens.scss" as oqcTokens;
 @use "./oqc-visual.scss" as oqcVisual;
+@use "./oqc-aisz-tokens.scss" as oqcAiszTokens;
+@use "./oqc-aisz-visual.scss" as oqcAiszVisual;
 
 /* Task 7 structural layout */
 :root {
@@ -210,3 +212,5 @@ body {
 }
 @include oqcTokens.emit;
 @include oqcVisual.emit;
+@include oqcAiszTokens.emit;
+@include oqcAiszVisual.emit;
