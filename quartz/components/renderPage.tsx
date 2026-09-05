@@ -283,7 +283,7 @@ export function renderPage(
     "en";
   const direction = i18n(cfg.locale).direction ?? "ltr";
   const doc = (
-    <html lang={lang} dir={direction} data-oqc-skin="aisz-console">
+    <html lang={lang} dir={direction} data-oqc-skin={process.env.OQC_SKIN ?? "standard-design"}>
       <Head {...componentData} />
       <body data-slug={slug}>
         <div id="quartz-root" class="page">

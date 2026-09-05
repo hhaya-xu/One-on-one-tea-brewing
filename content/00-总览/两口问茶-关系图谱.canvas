@@ -1,250 +1,34 @@
 {
   "nodes": [
-    {
-      "id": "a1b2c3d4e5f60718",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 520,
-      "height": 220,
-      "text": "# 两口问茶关系图谱\n\nL2 Canvas 策展视图。\n关系事实来源：各文章 frontmatter 的 `related` 与《两口问茶发展史》的系列索引。\n\n图例：`contains` = 系列总览包含文章；`relates-to` = 已确认相关。"
-    },
-    {
-      "id": "b1c2d3e4f5a60718",
-      "type": "file",
-      "x": 0,
-      "y": 320,
-      "width": 420,
-      "height": 240,
-      "file": "档案馆/两口问茶发展史.md"
-    },
-    {
-      "id": "c1d2e3f4a5b60718",
-      "type": "file",
-      "x": 560,
-      "y": 320,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶第二十四期丨师徒之决.md"
-    },
-    {
-      "id": "d1e2f3a4b5c60718",
-      "type": "file",
-      "x": 980,
-      "y": 320,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶·元日回归丨2023年的第一口风味.md"
-    },
-    {
-      "id": "e1f2a3b4c5d60718",
-      "type": "file",
-      "x": 1400,
-      "y": 320,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶第四十一期丨薄荷塘的巅峰对决.md"
-    },
-    {
-      "id": "f1a2b3c4d5e60718",
-      "type": "file",
-      "x": 560,
-      "y": 640,
-      "width": 360,
-      "height": 220,
-      "file": "其他茶会/「森林之下」大茶会之丨两口问茶表演赛.md"
-    },
-    {
-      "id": "a2b3c4d5e6f70819",
-      "type": "file",
-      "x": 980,
-      "y": 640,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶第76期丨泡茶四个境界.md"
-    },
-    {
-      "id": "b2c3d4e5f6a70819",
-      "type": "file",
-      "x": 1400,
-      "y": 640,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶第64期丨熟茶时空.md"
-    },
-    {
-      "id": "c2d3e4f5a6b70819",
-      "type": "file",
-      "x": 560,
-      "y": 960,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之茶人手作.md"
-    },
-    {
-      "id": "d2e3f4a5b6c70819",
-      "type": "file",
-      "x": 980,
-      "y": 960,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之茶知道答案.md"
-    },
-    {
-      "id": "e2f3a4b5c6d70819",
-      "type": "file",
-      "x": 1400,
-      "y": 960,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之“盲品”纪实.md"
-    },
-    {
-      "id": "f2a3b4c5d6e70819",
-      "type": "file",
-      "x": 560,
-      "y": 1280,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之“音与茶的探索-.md"
-    },
-    {
-      "id": "a3b4c5d6e7f8091a",
-      "type": "file",
-      "x": 980,
-      "y": 1280,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之再次品水.md"
-    },
-    {
-      "id": "b3c4d5e6f7a8091a",
-      "type": "file",
-      "x": 1400,
-      "y": 1280,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之玉陶看梨，茶雨山溪.md"
-    },
-    {
-      "id": "c3d4e5f6a7b8091a",
-      "type": "file",
-      "x": 980,
-      "y": 1600,
-      "width": 360,
-      "height": 220,
-      "file": "茶事记录/两口问茶之留一半清醒留一半醉意.md"
-    },
-    {
-      "id": "d3e4f5a6b7c8091a",
-      "type": "file",
-      "x": 1880,
-      "y": 320,
-      "width": 360,
-      "height": 220,
-      "file": "档案馆/两口问茶茶会规程.md"
-    },
-    {
-      "id": "e3f4a5b6c7d8091a",
-      "type": "file",
-      "x": 1880,
-      "y": 640,
-      "width": 360,
-      "height": 220,
-      "file": "其他茶会/茶山风水行-研学布朗2018.md"
-    }
+    {"id":"a1b2c3d4e5f60718","type":"text","x":0,"y":0,"width":520,"height":220,"text":"# 两口问茶关系图谱\n\nL2 Canvas 策展视图。\n关系事实来源：各文章 frontmatter 的 `related` 与《两口问茶发展史》的系列索引。\n\n图例：`contains` = 系列总览包含文章；`relates-to` = 已确认相关。"},
+    {"id":"b1c2d3e4f5a60718","type":"file","x":0,"y":320,"width":420,"height":240,"file":"档案馆/两口问茶发展史.md"},
+    {"id":"c1d2e3f4a5b60718","type":"file","x":560,"y":320,"width":360,"height":220,"file":"茶事记录/两口问茶第二十四期丨师徒之决.md"},
+    {"id":"d1e2f3a4b5c60718","type":"file","x":980,"y":320,"width":360,"height":220,"file":"茶事记录/两口问茶·元日回归丨2023年的第一口风味.md"},
+    {"id":"e1f2a3b4c5d60718","type":"file","x":1400,"y":320,"width":360,"height":220,"file":"茶事记录/两口问茶第四十一期丨薄荷塘的巅峰对决.md"},
+    {"id":"f1a2b3c4d5e60718","type":"file","x":560,"y":640,"width":360,"height":220,"file":"其他茶会/「森林之下」大茶会之丨两口问茶表演赛.md"},
+    {"id":"a2b3c4d5e6f70819","type":"file","x":980,"y":640,"width":360,"height":220,"file":"茶事记录/两口问茶第76期丨泡茶四个境界.md"},
+    {"id":"b2c3d4e5f6a70819","type":"file","x":1400,"y":640,"width":360,"height":220,"file":"茶事记录/两口问茶第64期丨熟茶时空.md"},
+    {"id":"c2d3e4f5a6b70819","type":"file","x":560,"y":960,"width":360,"height":220,"file":"茶事记录/两口问茶之茶人手作.md"},
+    {"id":"d2e3f4a5b6c70819","type":"file","x":980,"y":960,"width":360,"height":220,"file":"茶事记录/两口问茶之茶知道答案.md"},
+    {"id":"e2f3a4b5c6d70819","type":"file","x":1400,"y":960,"width":360,"height":220,"file":"茶事记录/两口问茶之“盲品”纪实.md"},
+    {"id":"f2a3b4c5d6e70819","type":"file","x":560,"y":1280,"width":360,"height":220,"file":"茶事记录/两口问茶之“音与茶的探索-.md"},
+    {"id":"a3b4c5d6e7f8091a","type":"file","x":980,"y":1280,"width":360,"height":220,"file":"茶事记录/两口问茶之再次品水.md"},
+    {"id":"b3c4d5e6f7a8091a","type":"file","x":1400,"y":1280,"width":360,"height":220,"file":"茶事记录/两口问茶之玉陶看梨，茶雨山溪.md"},
+    {"id":"c3d4e5f6a7b8091a","type":"file","x":980,"y":1600,"width":360,"height":220,"file":"茶事记录/两口问茶之留一半清醒留一半醉意.md"}
   ],
   "edges": [
-    {
-      "id": "eaa1000000000001",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "c1d2e3f4a5b60718",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000002",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "d1e2f3a4b5c60718",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000003",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "e1f2a3b4c5d60718",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000004",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "f1a2b3c4d5e60718",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000005",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "a2b3c4d5e6f70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000006",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "b2c3d4e5f6a70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000007",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "c2d3e4f5a6b70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000008",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "d2e3f4a5b6c70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa1000000000009",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "e2f3a4b5c6d70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa100000000000a",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "f2a3b4c5d6e70819",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa100000000000b",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "a3b4c5d6e7f8091a",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa100000000000c",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "b3c4d5e6f7a8091a",
-      "toEnd": "arrow",
-      "label": "contains"
-    },
-    {
-      "id": "eaa100000000000d",
-      "fromNode": "b1c2d3e4f5a60718",
-      "toNode": "c3d4e5f6a7b8091a",
-      "toEnd": "arrow",
-      "label": "contains"
-    }
+    {"id":"eaa1000000000001","fromNode":"b1c2d3e4f5a60718","toNode":"c1d2e3f4a5b60718","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000002","fromNode":"b1c2d3e4f5a60718","toNode":"d1e2f3a4b5c60718","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000003","fromNode":"b1c2d3e4f5a60718","toNode":"e1f2a3b4c5d60718","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000004","fromNode":"b1c2d3e4f5a60718","toNode":"f1a2b3c4d5e60718","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000005","fromNode":"b1c2d3e4f5a60718","toNode":"a2b3c4d5e6f70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000006","fromNode":"b1c2d3e4f5a60718","toNode":"b2c3d4e5f6a70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000007","fromNode":"b1c2d3e4f5a60718","toNode":"c2d3e4f5a6b70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000008","fromNode":"b1c2d3e4f5a60718","toNode":"d2e3f4a5b6c70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa1000000000009","fromNode":"b1c2d3e4f5a60718","toNode":"e2f3a4b5c6d70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa100000000000a","fromNode":"b1c2d3e4f5a60718","toNode":"f2a3b4c5d6e70819","toEnd":"arrow","label":"contains"},
+    {"id":"eaa100000000000b","fromNode":"b1c2d3e4f5a60718","toNode":"a3b4c5d6e7f8091a","toEnd":"arrow","label":"contains"},
+    {"id":"eaa100000000000c","fromNode":"b1c2d3e4f5a60718","toNode":"b3c4d5e6f7a8091a","toEnd":"arrow","label":"contains"},
+    {"id":"eaa100000000000d","fromNode":"b1c2d3e4f5a60718","toNode":"c3d4e5f6a7b8091a","toEnd":"arrow","label":"contains"}
   ]
 }

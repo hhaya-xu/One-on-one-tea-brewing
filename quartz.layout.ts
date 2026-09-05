@@ -1,3 +1,6 @@
+// OQC CORE HOME HERO START
+import OqcHomeHero from "./quartz/components/oqc/HomeHero";
+// OQC CORE HOME HERO END
 import { FullPageLayout, PageLayout, SharedLayout } from "./quartz/cfg";
 import * as Component from "./quartz/components";
 import OqcArticleTitle from "./quartz/components/oqc/ArticleTitle";
@@ -21,6 +24,8 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout &
   Pick<FullPageLayout, "afterBody"> = {
   beforeBody: [
+    // OQC CORE HOME HERO ENTRY
+OqcHomeHero(),
     OqcBreadcrumbs({ rootName: "首页" }),
     OqcArticleTitle(),
     OqcSiteSubtitle(),
