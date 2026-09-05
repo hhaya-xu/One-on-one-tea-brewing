@@ -4,6 +4,7 @@ import {
   QuartzComponentProps,
 } from "../types";
 import { pathToRoot } from "../../util/path";
+import homeHeroConfig from "./HomeHeroConfig";
 
 interface HomeHeroConfig {
   title: string;
@@ -14,14 +15,9 @@ interface HomeHeroConfig {
   videoUrl: string;
 }
 
-function readConfig(): HomeHeroConfig | null {
-  const raw = process.env.OQC_HOME_HERO;
-  return raw ? (JSON.parse(raw) as HomeHeroConfig) : null;
-}
-
 const OqcHomeHero: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
-  const config = readConfig();
-  if (fileData.slug !== "index" || !config) return null;
+  const config = homeHeroConfig as HomeHeroConfig;
+  if (fileData.slug !== "index") return null;
 
   const baseDir = pathToRoot(fileData.slug);
   return (
