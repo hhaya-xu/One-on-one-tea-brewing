@@ -10,6 +10,7 @@ const ContentMeta: QuartzComponent = ({
   cfg,
   displayClass,
 }: QuartzComponentProps) => {
+  if (fileData.slug === "index") return null;
   const date = fileData.dates?.created;
   const dateStr = date
     ? new Date(date).toLocaleDateString(

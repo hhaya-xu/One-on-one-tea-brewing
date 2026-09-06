@@ -10,6 +10,7 @@ const TagList: QuartzComponent = ({
   fileData,
   displayClass,
 }: QuartzComponentProps) => {
+  if (fileData.slug === "index") return null;
   const tags = fileData.frontmatter?.tags;
   if (!tags || tags.length === 0) return null;
   const baseDir = pathToRoot(fileData.slug!);

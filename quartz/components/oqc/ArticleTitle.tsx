@@ -11,6 +11,7 @@ const ArticleTitle: QuartzComponent = ({
   cfg,
   displayClass,
 }: QuartzComponentProps) => {
+  if (fileData.slug === "index") return null;
   const title =
     fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title;
   return <h1 class={classNames(displayClass, "oqc-article-title")}>{title}</h1>;
